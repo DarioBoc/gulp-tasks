@@ -1,0 +1,19 @@
+{
+  "name": "gulp-tasks",
+  "version": "1.0.0",
+  "description": "boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarioBoc/gulp-tasks.git"
+  },
+  "author": "Dario Nahuel Rodriguez <darionahuel.parse@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DarioBoc/gulp-tasks/issues"
+  },
+  "homepage": "https://github.com/DarioBoc/gulp-tasks#readme"
+}
