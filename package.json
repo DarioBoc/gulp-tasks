@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "browser-sync start --server --startPath \"dist/views\" --files \"dist/**/*.+(html|css|js)\"",
     "pug": "gulp pug"
   },
   "repository": {
