@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "browser-sync start --server --startPath \"dist/views\" --files \"dist/**/*.+(html|css|js)\"",
-    "pug": "gulp pug"
+    "pug": "gulp pug",
+    "sass": "gulp sass"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
     "url": "https://github.com/DarioBoc/gulp-tasks/issues"
   },
   "homepage": "https://github.com/DarioBoc/gulp-tasks#readme",
-    "dependencies": {
+  "dependencies": {
     "animate.css": "^3.5.2",
     "font-awesome": "^4.6.3",
     "jquery": "^2.2.4",
@@ -37,7 +38,7 @@
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.3",
     "gulp-pug": "^3.0.4",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^3.1.0",
     "gulp-svgmin": "^1.2.2",
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
