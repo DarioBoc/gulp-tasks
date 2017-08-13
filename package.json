@@ -8,7 +8,13 @@
     "serve": "browser-sync start --server --startPath \"dist/views\" --files \"dist/**/*.+(html|css|js)\"",
     "pug": "gulp pug",
     "sass": "gulp sass",
-    "babel": "gulp babel"
+    "babel": "gulp babel",
+    "build:dev": "run-s pug sass babel",
+    "watch:pug": "onchange \"./src/pug/**\" -- npm run pug",
+    "watch:sass": "onchange \"./src/scss/**\" -- npm run sass",
+    "watch:babel": "onchange \"./src/js/**\" -- npm run babel",
+    "watch:dev": "run-p serve watch:pug watch:sass watch:babel",
+    "dev": "run-s build:dev watch:dev"
   },
   "repository": {
     "type": "git",
@@ -46,7 +52,7 @@
     "gulp-useref": "^3.1.2",
     "gulp-webp": "^2.3.0",
     "imagemin-pngquant": "^5.0.0",
-    "onchange": "^3.0.0",
-    "parallelshell": "^2.0.0"
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.0.0"
   }
 }
