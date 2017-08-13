@@ -4,6 +4,8 @@ const gulp = require('gulp'),
     pug = require('gulp-pug'),
     sass = require('gulp-sass'),
     babel = require('gulp-babel'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
     dir = {
         src: 'src',
         dist: 'dist',
@@ -21,7 +23,11 @@ const gulp = require('gulp'),
         },
         babel: {
             presets: ['es2015']
-        }
+        },
+        imagemin: { 
+            progressive: true,
+            use: [pngquant()]
+        },
     };
 
 gulp.task('pug', () => {
@@ -43,4 +49,11 @@ gulp.task('babel', () => {
         .src(`${dir.src}/js/*.js`)
         .pipe(babel(options.babel))
         .pipe(gulp.dest(`${dir.dist}/js`))
+});
+
+gulp.task('img', () => {
+    gulp
+        .src(`${dir.src}/img/*.+(png|jpeg|jpg|gif)`)
+        .pipe(imagemin())
+        .pipe(gulp.dest(`${dir.dist}/img`))
 });

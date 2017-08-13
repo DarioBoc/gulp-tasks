@@ -14,7 +14,8 @@
     "watch:sass": "onchange \"./src/scss/**\" -- npm run sass",
     "watch:babel": "onchange \"./src/js/**\" -- npm run babel",
     "watch:dev": "run-p serve watch:pug watch:sass watch:babel",
-    "dev": "run-s build:dev watch:dev"
+    "dev": "run-s build:dev watch:dev",
+    "img": "gulp img"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,7 @@
     "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-htmlmin": "^2.0.0",
-    "gulp-imagemin": "^3.0.3",
+    "gulp-imagemin": "^3.3.0",
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^3.1.0",
     "gulp-svgmin": "^1.2.2",
@@ -51,7 +52,7 @@
     "gulp-uncss": "^1.0.6",
     "gulp-useref": "^3.1.2",
     "gulp-webp": "^2.3.0",
-    "imagemin-pngquant": "^5.0.0",
+    "imagemin-pngquant": "^5.0.1",
     "npm-run-all": "^4.0.2",
     "onchange": "^3.0.0"
   }
