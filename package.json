@@ -15,7 +15,8 @@
     "watch:babel": "onchange \"./src/js/**\" -- npm run babel",
     "watch:dev": "run-p serve watch:pug watch:sass watch:babel",
     "dev": "run-s build:dev watch:dev",
-    "img": "gulp img"
+    "img": "gulp img",
+    "svg": "gulp svg"
   },
   "repository": {
     "type": "git",

@@ -6,6 +6,7 @@ const gulp = require('gulp'),
     babel = require('gulp-babel'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
+    svgmin = require('gulp-svgmin'),
     dir = {
         src: 'src',
         dist: 'dist',
@@ -27,6 +28,12 @@ const gulp = require('gulp'),
         imagemin: { 
             progressive: true,
             use: [pngquant()]
+        },
+        svgmin: {
+            plugins: [ 
+                {convertColors: false },
+                {removeAttrs: { attrs: ['fill'] }}
+            ]
         },
     };
 
@@ -56,4 +63,11 @@ gulp.task('img', () => {
         .src(`${dir.src}/img/*.+(png|jpeg|jpg|gif)`)
         .pipe(imagemin())
         .pipe(gulp.dest(`${dir.dist}/img`))
+});
+
+gulp.task('svg', () => {
+    gulp
+        .src(`${dir.src}/img/svg/*.svg`)
+        .pipe(svgmin(options.svgmin))
+        .pipe(gulp.dest(`${dir.dist}/img/svg`));
 });
